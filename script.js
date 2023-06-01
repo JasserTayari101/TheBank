@@ -227,6 +227,12 @@ function createDots(){
     const dot = document.createElement('div');
     dot.classList.add('dots__dot');
     dot.dataset.slide = i;
+    dot.addEventListener('click',function(e){
+      dotContainer.childNodes[currentSlide].classList.remove('dots__dot--active');
+      currentSlide = this.dataset.slide;
+      dotContainer.childNodes[currentSlide].classList.add('dots__dot--active');
+      setSlides();
+    })
     dotContainer.append(dot);
   }
 }
@@ -264,5 +270,6 @@ larrow.addEventListener('click',()=>{
   }
   dotContainer.childNodes[currentSlide].classList.add('dots__dot--active');
     setSlides();
-  })
+})
+
   
