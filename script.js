@@ -133,7 +133,6 @@ const navHeight = navbar.getBoundingClientRect().height;
 
 function obsCallback(entries,stickyObserver){
   const [entry] = entries;
-  console.log(entry);
   if(!entry.isIntersecting)
     navbar.classList.add('sticky');
   else

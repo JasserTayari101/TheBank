@@ -114,7 +114,7 @@ img {
 /* NAVIGATION */
 .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   height: 9rem;
   width: 110%;
